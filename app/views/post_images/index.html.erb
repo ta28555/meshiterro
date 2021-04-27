@@ -1,4 +1,4 @@
-<%= @post_images.each do |post_image| %>
+<% @post_images.each do |post_image| %>
 <div>
 
   <%= link_to post_image_path(post_image.id) do %> <!--詳細画面へのリンク-->
@@ -21,5 +21,13 @@
     ユーザーネーム:
     <%= post_image.user.name%>
   </p>
+
+  <!--コメント件数-->
+  <p>
+    <%= link_to "#{post_image.post_comments.count}コメント",post_image_path(post_image.id) %>
+  </p>
 </div>
 <%end%>
+
+<!--kaminari-->
+<%= paginate @post_images %>
