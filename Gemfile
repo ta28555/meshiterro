@@ -70,3 +70,10 @@ gem "refile-mini_magick"
 
 # kaminariをインストール
 gem 'kaminari','~> 1.2.1'
+
+# bootstrap
+gem 'bootstrap', '~> 4.5'
+gem 'jquery-rails'
+
+# fontaweome
+gem 'font-awesome-sass', '~> 5.13'
